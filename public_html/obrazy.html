@@ -1,50 +1,96 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="wDesign">
-	<title>bez nazwy</title>
+<head>
+    <meta charset="utf-8" />
+    <title>Wstawianie obrazów na stronę WWW</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        img { border: 5px solid #F00; }
+        a.zielony { color: red; }
+        .lewy { float: left; margin-right: 20px; }
+        .prawy {
+            float: right;
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-family: "Times New Roman", Times, serif;
+            font-style: normal;
+            font-size: 16pt;
+        }
 
-  <style>
-    img{
-      border: 5px solid red;
-    }
+        .zielony {
+            color: green;
+            font-size: 20pt;
+            text-decoration: underline;
+        }
+        div p {
+            font-family: arial, verdana, sans-serif;
+            background-color: red;
+            padding: 5px 10px 20px 10px;
+        }
+        #akapit5 {
+            border-left: 5px dotted blue;
+            border-bottom: 5px dotted blue;
+            font-family: serif;
+        }
 
-    .left{
-      float: left;
-      margin-right: 20px;
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-bottom: 10px;
-    }
+        #link {color: yellow;}
+        #link1 {color: pink;}
 
-    .right{
-      float: right;
-      margin-left: 20px;
-      margin-top: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
+        #listy li { color: red; }
+        li.wew { color: yellow; }
 
-    .clear{
-      clear: both;
-    }
-
-  </style>
+    </style>
 </head>
 
 <body>
-    <h1>Wstawianie obrazów na stronę www</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat pellentesque tellus, ut ullamcorper est aliquam eu. Suspendisse a bibendum velit. Vivamus interdum arcu a orci efficitur consectetur. Praesent quis ullamcorper diam. Aliquam lectus risus, luctus non nulla vitae, vestibulum suscipit elit. Integer lobortis sapien et erat luctus, at pretium elit rhoncus. Cras metus urna, sollicitudin eu dapibus at, laoreet ut sem. Nam lobortis fringilla tellus quis pharetra. Nullam consectetur vulputate risus, in elementum nunc ultrices a. Vestibulum vestibulum vitae neque vel tempor. Morbi imperdiet id dui id efficitur. Nulla laoreet diam non bibendum aliquet. Mauris a fermentum risus. Donec quis ex id tortor viverra maximus. Curabitur eleifend orci in mollis semper. Nam et pulvinar nulla, ut sollicitudin lacus. Vestibulum fermentum volutpat pharetra. Donec malesuada, enim id efficitur lacinia, leo nunc eleifend sapien, auctor auctor neque augue et lacus. Nunc hendrerit ultrices commodo. Etiam luctus orci odio, id vestibulum sem pulvinar ut. Sed sit amet felis ut nisl pretium volutpat eu sit amet nibh. In accumsan quam in congue sagittis. Vestibulum vel libero placerat, consectetur nunc at, condimentum quam. Donec dictum nunc metus, sagittis tristique magna interdum vel. Praesent sodales ultricies odio, id efficitur tortor. Suspendisse non porta mauris, sit amet tincidunt enim. Donec blandit porta eros, vitae suscipit libero feugiat ac. Etiam ullamcorper nec nunc ac rutrum. Nullam a sapien magna. Aliquam convallis, quam et imperdiet hendrerit, sem urna tincidunt odio, non laoreet lectus nisl ut urna. </p>
 
-    <img src="/home/kl1ag1/gitrepo/public_html/imgs/mg.jpg" width="1900px">
+    <h1>Wstawianie obrazów</h1>
+    <p>
+        <img src="./imgs/obraz1.jpg" width="350">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor inreprehenderit in voluptate velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor inreprehenderit in voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>
+    <p>
+        <img src="./imgs/obraz2.jpg" class="prawy" width="450">
+        <img src="./imgs/obraz3.jpg" class="lewy" width="450">
+        Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor inreprehenderit in voluptate velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ull</p>
 
-    <p>Mauris tincidunt, ex a gravida euismod, lacus mauris hendrerit neque, sit amet egestas orci nisl non odio. Aliquam mattis massa non turpis consequat, a mollis tortor tincidunt. Sed turpis libero, convallis vitae dolor tincidunt, rutrum hendrerit elit. Maecenas ante ex, vestibulum sit amet dignissim sed, eleifend tempus erat. Curabitur fermentum tincidunt varius. Nulla vulputate leo metus, in accumsan lorem tempor eget. Integer dictum molestie ligula, vitae gravida ipsum pharetra id. Nunc posuere feugiat justo ac ornare. Donec elementum purus ut quam pretium, vitae vestibulum mi rhoncus. Cras placerat pulvinar nulla, ac aliquam turpis mattis eu. Pellentesque finibus, leo ut pharetra aliquam, lacus diam posuere metus, ut semper lectus nisl a dui. Fusce eu nulla vitae ipsum eleifend cursus sed ut ante. Nam vestibulum ut sem lacinia efficitur. Curabitur eu neque at neque consequat pretium eu eget augue. Nunc varius augue sed laoreet dapibus. Praesent ex odio, consectetur eu eleifend sed, maximus eget quam. Curabitur porttitor tincidunt arcu. Etiam lobortis sodales nisl vitae rutrum. Aenean ullamcorper condimentum urna. </p>
+    <p>Akapit 1 tekst przykładowy <a href="http://www.w3schools.com">w3schools.com</a></p>
+    <p class="zielony">Akapit 2 tekst przykładowy</p>
+    <p>Akapit 3 tekst przykładowy</p>
 
-    <img src="/home/kl1ag1/gitrepo/public_html/imgs/besos.jpg" class="right" width="400px">
-    <img src="/home/kl1ag1/gitrepo/public_html/imgs/magda.jpg" class="left" width="400Px">
-    <div class="clear"></div>
+    <div>
+        <p id="akapit4">Akapit 4 tekst przykładowy <a href="http://how2html.pl">Kurs HTML 5</a></p>
+        <p id="akapit5">Akapit 5 tekst przykładowy</p>
+        <p class="zielony">Akapit 6 tekst przykładowy</p>
+    </div>
+
+    <div>
+        <p class="zielony">Akapit 7 tekst przykładowy
+            <ol>
+                <li><a id="link1" class="zielony" href="http://how2html.pl" style="color: orange;">Kurs HTML 5</a></li>
+                <li><a id="link2" href="http://how2html.pl">Kurs HTML 5</a></li>
+                <li><a id="link3" href="http://how2html.pl">Kurs HTML 5</a></li>
+                <li><a id="link4" href="http://how2html.pl">Kurs HTML 5</a></li>
+                <li><a id="link5" href="http://how2html.pl">Kurs HTML 5</a></li>
+                [todo: wyjaśnić sposób zmieniania właściwości grup elementów]
+            </ol>
+         </p>
+        <p>Akapit 8 tekst przykładowy</p>
+        <p>Akapit 9 tekst przykładowy</p>
+    </div>
+
+    <div id="listy">
+        <ul>
+            <li>
+                <ul>
+                    <li class="wew">elemen listy zagnieżdżonej</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
 </body>
 
