@@ -6,7 +6,7 @@ import turtle
 def main(args):
     
     turtle.setup(800, 600)
-    while 1>0:
+    for i in range(4):
         turtle.forward(200)
         turtle.left(90)
     return 0
