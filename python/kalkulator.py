@@ -20,10 +20,22 @@ def pokaz_liste():
           ''')
           
 def pobierz_liczbe(komunikat='Pobierz liczbę: '):
-    a = int(input(komunikat))
-    b = int(input(komunikat))
+    a = input(komunikat)
     if a.isdigit():
-        return a
+        return int(a)
+    return False
+
+def dodaj(a, b):
+    return a+b
+    
+def odejmij(a, b):
+    return a-b
+    
+def mnoz(a, b):
+    if b != 0:
+        return a*b
+    else:
+        print("Błąd! Mnożenie przez zero!")
     return False
 
 def dziel(a, b):
@@ -32,31 +44,77 @@ def dziel(a, b):
     else:
         print("Błąd! Dzielenie przez zero!")
     return False
-            
-def main(args):
     
+def dzielcal(a, b):
+    if b != 0:
+        return a//b
+    else:
+        print("Błąd! Dzielenie przez zero!")
+    return False
+
+def mod(a, b):
+    if b != 0:
+        return a%b
+    else:
+        print("Błąd! Dzielenie przez zero!")
+    return False
+
+def poteg(a, b):
+        return a**b
+
+def main(args):
     pokaz_liste()
     while True:
         d = input("Wybierz działanie: ")
         if d == '+':
-            pass
+            a = pobierz_liczbe("Podaj pierwszy składnik: ")
+            b = pobierz_liczbe("Podaj drugi składnik: ")
+            if a and b:
+                wynik = dodaj(a, b)
+                if wynik:
+                    print('{} + {} = {}'.format(a, b, wynik))
         elif d == '-':
-            pass
+            a = pobierz_liczbe("Podaj odjemną: ")
+            b = pobierz_liczbe("Podaj odjemnik: ")
+            if a and b:
+                wynik = odejmij(a, b)
+                if wynik:
+                    print('{} - {} = {}'.format(a, b, wynik))
         elif d == '*':
-            pass
+            a = pobierz_liczbe("Podaj pierwszy czynnik: ")
+            b = pobierz_liczbe("Podaj drugi czynnik: ")
+            if a and b:
+                wynik = mnoz(a, b)
+                if wynik:
+                    print('{} * {} = {}'.format(a, b, wynik))
         elif d == '/':
-            a = pobierz_liczbe(Podaj dzielną: )
-            b = pobierz_liczbe(Podaj dzielnik: )
+            a = pobierz_liczbe("Podaj dzielną: ")
+            b = pobierz_liczbe("Podaj dzielnik: ")
             if a and b:
                 wynik = dziel(a, b)
                 if wynik:
                     print('{} / {} = {}'.format(a, b, wynik))
         elif d == '//':
-            pass
+            a = pobierz_liczbe("Podaj dzielną: ")
+            b = pobierz_liczbe("Podaj dzielnik: ")
+            if a and b:
+                wynik = dzielcal(a, b)
+                if wynik:
+                    print('{} // {} = {}'.format(a, b, wynik))
         elif d == '%':
-            pass
+            a = pobierz_liczbe("Podaj dzielną: ")
+            b = pobierz_liczbe("Podaj dzielnik: ")
+            if a and b:
+                wynik = mod(a, b)
+                if wynik:
+                    print('{} % {} = {}'.format(a, b, wynik))
         elif d == '^':
-            pass
+            a = pobierz_liczbe("Podaj podstawę: ")
+            b = pobierz_liczbe("Podaj wykładnik: ")
+            if a and b:
+                wynik = poteg(a, b)
+                if wynik:
+                    print('{} ^ {} = {}'.format(a, b, wynik))
         elif d == '!':
             pass
         elif d == 'sin':
