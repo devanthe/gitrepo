@@ -3,6 +3,7 @@
 #
 #  kalkulator.py
 
+from math import sin, cos, pi
 
 def pokaz_liste():
     print('''Lista działań:
@@ -23,7 +24,7 @@ def pobierz_liczbe(komunikat='Pobierz liczbę: '):
     a = input(komunikat)
     if a.isdigit():
         return int(a)
-    return False
+        return False
 
 def dodaj(a, b):
     return a+b
@@ -36,32 +37,46 @@ def mnoz(a, b):
         return a*b
     else:
         print("Błąd! Mnożenie przez zero!")
-    return False
+        return False
 
 def dziel(a, b):
     if b != 0:
         return a/b
     else:
         print("Błąd! Dzielenie przez zero!")
-    return False
+        return False
     
 def dzielcal(a, b):
     if b != 0:
         return a//b
     else:
         print("Błąd! Dzielenie przez zero!")
-    return False
+        return False
 
 def mod(a, b):
     if b != 0:
         return a%b
     else:
         print("Błąd! Dzielenie przez zero!")
-    return False
+        return False
 
 def poteg(a, b):
-        return a**b
-
+    return a**b
+    
+def sinus(stopien):
+    if -1 < stopien < 361:
+        return sin(stopien*pi/180)
+    else: 
+        print("Błędny zakres stopni!")
+        return False
+    
+def cosinus(stopien):
+    if -1 < stopien < 361:
+        return cos(stopien*pi/180)
+    else: 
+        print("Błędny zakres stopni!")
+        return False
+    
 def main(args):
     pokaz_liste()
     while True:
@@ -118,16 +133,19 @@ def main(args):
         elif d == '!':
             pass
         elif d == 'sin':
-            pass
+            a = pobierz_liczbe("Podaj kąt w stopniach: ")
+            if not isinstance(a, (bool)):
+                print('sin({}) = {}'.format(a, sinus(a)))
         elif d == 'cos':
-            pass
+            a = pobierz_liczbe("Podaj kąt w stopniach: ")
+            if not isinstance(a, (bool)):
+                print('cos({}) = {}'.format(a, cosinus(a)))
         elif d == 'l':
             pokaz_liste()
         elif d == 'koniec':
             return 0
         else:
             print("Błędny wybór!")
-            
     return 0
 
 if __name__ == '__main__':
