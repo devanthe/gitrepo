@@ -4,32 +4,33 @@
 #  napisy.py
 
 def pobierz_dane1():
-    imie = input("Proszę podać imię: ")
-    nazwisko = input("Proszę podać nazwisko: ")
+    imie = input('Podaj imię: ')
+    nazwisko = input('Podaj nazwisko: ')
+    print("Witaj {} {}!".format(imie.strip().capitalize(),
+                                nazwisko.strip().capitalize()))
     imie = imie.strip()
     nazwisko = nazwisko.strip()
-    print("Witaj {} {}!".format(imie.capitalize(), nazwisko.capitalize()))
-    print("Miło nam cię poznać!")
-    imie == len(imie)
-    nazwisko == len(nazwisko)
-    if imie == nazwisko:
-        print("Twoje imię i nazwisko mają tyle samo znaków!")
-    elif imie > nazwisko:
-        print("Twoje imię jest dłuższe od nazwiska!")
+    if len(imie) > len(nazwisko):
+        print("Imię > nazwisko")
+    elif len(imie) < len(nazwisko):
+        print("Imię < nazwisko")
     else:
-        print("Twoje imię jest krótsze of nazwiska!")
-        
+        print("Imię == nazwisko")
+
+    # sprawdź płeć, 
     if imie[-1] == 'a':
-        print("Jesteś kobietą, gejem albo transgenderem!")
+        print("kobieta")
     else:
-        print("Jesteś mężczyzną, gejem lub transgenderem!")
-        
+        print("mężczyzna")
+
+
 def pobierz_dane2():
     nazwa = input("Imię i nazwisko: ").strip()
     while nazwa.count(' ') != 1:
         nazwa = input("Imię i nazwisko: ").strip()
-    samogloski = set(["a", "o", "u", "e", "i", "y", "ę", "ą"])
-    inne = set([",", ".", "!", "?", " ", "\t"])
+
+    samogloski = set(['a', 'o', 'u', 'e', 'y', 'i', 'ę', 'ą'])
+    inne = set([',', '.', '!', '?', ' ', '\t'])
     ileSa = 0
     ileSp = 0
     for znak in nazwa:
@@ -38,16 +39,16 @@ def pobierz_dane2():
         elif znak not in inne:
             ileSp += 1
     if ileSa > ileSp:
-        print("Jest więcej samogłosek niż spółgłosek w twoim imieniu i nazwisku!")
+        print("Samgłoski > spółgłoski")
     elif ileSa < ileSp:
-        print("Jest więcej spółgłosek niż samogłosek w twoim imieniu i nazwisku!")
+        print("Spółgłoski > samogłoski")
     else:
-        print("Masz tyle samo spółgłosek i samogłosek w twoim imieniu i nazwisku!")
+        print("Samgłoski = spółgłoski")
 
 def pobierz_dane3():
-    napis1 = input("Podaj tekst do zamiany: ").strip()
+    napis1 = input("Tekst: ").strip()
     napis2 = ''
-    inne = set([",", ".", "!", "?", " ", "\t"])
+    inne = set([',', '.', '!', '?', ' ', '\t'])
     for znak in napis1:
         if znak not in inne and not znak.isdigit():
             if znak.islower():
@@ -56,13 +57,14 @@ def pobierz_dane3():
                 napis2 += znak.lower()
         else:
             napis2 += znak
-            
     print(napis2)
-        
 
 def main(args):
+    # pobierz_dane1()
+    # pobierz_dane2()
     pobierz_dane3()
     return 0
+
 
 if __name__ == '__main__':
     import sys
