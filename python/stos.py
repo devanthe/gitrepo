@@ -1,26 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#
+#  stos.py
 
-#zadeklarowana pusta lista o zasięgu globalnym
 stos = []
-SP = 0 #stack pointer
+SP = 0  # stack pointer
 
 def push(rozmiar, dane):
     global SP, stos
     if SP < rozmiar:
         stos[SP] = dane
-        SP + 1
+        SP += 1
     else:
         print("Stack overflow!")
-        
+
 def pop(rozmiar):
-    global SP, stos
     SP -= 1
     if SP < rozmiar:
         print(stos[SP])
     else:
         print("Stack overflow!")
-        
+
 def main(args):
     global SP, stos
     rozmiar = 5

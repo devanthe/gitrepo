@@ -5,28 +5,28 @@
 
 def pobierz_klucz():
     try:
-        klucz = int(input("Podaj klucz:\n"))
+        klucz = int(input('Podaj klucz:\n'))
         return klucz % 26
     except ValueError:
-        print("Błędny klucz! OwO")
+        print('Błędny klucz!')
         return 3
-    
+
+
 def szyfruj_1(tekst, klucz):
-    inne = set([",", ".", "!", "?", " ", "\t"])
     szyfrogram = ''
     for znak in tekst:
         ascii = ord(znak)
-        if znak = inne:
-                    
-        elif ascii + klucz > 122:
+        if ascii + klucz > 122:
             znak = chr(ascii + klucz - 26)
         else:
             znak = chr(ascii + klucz)
-        szyfrogram += znak 
-    print("Szyfrogram:\n", szyfrogram)
-    
+        szyfrogram += znak
+
+    print('Szyfrogram:\n', szyfrogram)
+
+
 def main(args):
-    tekst = input("Podaj tekst: ").lower()
+    tekst = input('Podaj tekst:\n').lower()
     klucz = pobierz_klucz()
     szyfruj_1(tekst, klucz)
     return 0
