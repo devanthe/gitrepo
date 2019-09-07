@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
-#  palindromy.py
+
 import os
 
 
@@ -24,26 +23,17 @@ def czytaj_dane(plik):
     return teksty
 
 
-def palindrom(teksty, linia):
-    for t in range(ileT): #dla t w randze ile tekstów
-        if czy_palindrom(linia): #jeśli linia jest palindromem 
-            palindrom.append() #dodaj palindrom do listy
-            ileT =- 1
-    return palindrom
-    
-    
 def main(args):
     # tekst = input('Podaj tekst: ')
     teksty = czytaj_dane('dane01.txt')
-    # ~ print(teksty)
+    print(teksty)
     ile = 0
     palindrom = []
-    ileT = len(teksty)
-    linia = teksty[-1]
+    lt = len(teksty)
+    for c in lt:
+        czy_palindrom(teksty[-1])
+        palindrom.append()
     
-    
-    print(len(palindrom))
-  
     # ~if czy_palindrom(tekst):
         # ~print('To palindrom!')
     # ~else:
