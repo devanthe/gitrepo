@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
-#  palindromy.py
+
 import os
 
 
@@ -29,6 +28,11 @@ def main(args):
     teksty = czytaj_dane('dane01.txt')
     print(teksty)
     ile = 0
+    palindrom = []
+    lt = len(teksty)
+    for c in lt:
+        czy_palindrom(teksty[-1])
+        palindrom.append()
     
     # ~if czy_palindrom(tekst):
         # ~print('To palindrom!')
