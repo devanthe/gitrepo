@@ -37,24 +37,52 @@
                 </h1>
                 <hr>
                 <form action="formularz.html" method="GET" name="dane" id="dane">
+
+                  <input type="hidden" name="id_user" value="10"></input>
                     <!-- komentarz bc im lazy -->
-                  <div class="form-group">
-                    <label for="login">Login:</label>
-                    <input type="text" name="login" id="login" class="form-control" required="required"></input>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" class="form-control" required="required"></input>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="haslo">E-mail:</label>
-                    <input type="password" name="password" id="password" class="form-control" required="required"></input>
-                  </div>
-
+                    <div class="form-group">
+                        <label for="login">Login:</label>
+                        <input type="text" name="login" id="login" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="haslo">E-mail:</label>
+                        <input type="password" name="password" id="password" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="plec">Wybierz płeć:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="plec" value="m" id="radio1">Mężczyzna</input>
+                            <label class="form-check-label" type="radio" name="plec" value="m" for="radio1"></label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="plec" value="k" id="radio2">Kobieta</input>
+                            <label class="form-check-label" type="radio" name="plec" value="k" for="radio2"></label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="plec" value="n" id="radio3" checked></input>
+                            <label class="form-check-label" type="radio" name="plec" value="n" for="radio3">Nie</label>
+                        </div>
+                    </div>
+                    <label for="dodatki">Wybierz dodatki:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="d1" value="d1" id="d1"></input>
+                        <label class="form-check-label" for="d1">D1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="d2" value="d2" id="d2"></input>
+                        <label class="form-check-label" for="d2">D2</label>
+                    </div>
+                    <label for="plec2">Wybierz płeć z listy:</label>
+                    <select name="plec2" class="form-control">
+                      <option value="m">Mężczyzna</option>
+                      <option value="k">Kobieta</option>
+                      <option value="n" selected>Nie</option>
+                    </select>
                     <input type="submit" name="submit" value="Wyślij!" class="btn btn-primary"></input>
-
                 </form>
                 </hr>
             </div>
