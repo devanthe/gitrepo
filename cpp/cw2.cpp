@@ -17,7 +17,7 @@ void drukuj(int staz, int zarobek){
 void awans(int &lata, int &staz, int &zarobek){
     int petla;
     for(petla = 1; petla <= lata; petla++){
-        drukuj()
+        drukuj(staz, zarobek);
         }
     }
 

@@ -9,7 +9,12 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    int rozmiar = 5;
+    
+    int rozmiar = 0;
+    cout << "Ile liczb chcesz wprowadzić?" << endl;
+    while(rozmiar>0 && rozmiar<=20){
+        cin >> rozmiar;
+        }
     
 	int tablica[rozmiar];
     
