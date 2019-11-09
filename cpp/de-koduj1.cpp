@@ -3,18 +3,15 @@
  *
  *
  */
-
-
 #include <iostream>
 using namespace std;
 
-void koduj(char tabzn[], int rozmiar){
-    int i = 0;
-    for(i = 0; i < rozmiar; i++){ //jeśli numery zmienimy cyfry na znaki używając char jeśli są w ok zakresie to wydrukuje nam znak do jakiego należy wg kodu ascii
-        if (tabzn[i]  == '\n') {
+void koduj(char tekst[], int rozmiar){
+    for(int i = 0; i < rozmiar; i++){ //jeśli numery zmienimy cyfry na znaki używając char jeśli są w ok zakresie to wydrukuje nam znak do jakiego należy wg kodu ascii
+        if (tekst[i]  == '\n') {
             cout << 10 << " ";
         } else {
-            cout << int(tabzn[i]) << " ";
+            cout << int(tekst[i]) << " ";
         }
     }
 }
