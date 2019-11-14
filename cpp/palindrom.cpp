@@ -3,30 +3,38 @@
  * 
  * Copyright 2019  <>
  * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
  */
 
 
 #include <iostream>
+#include <cstring>
+using namespace std;
+
+bool czy_palindrom(char tekst[], int pr){
+    int i;
+    for(i = 0; i < pr/2; i++){
+        if(tekst[i] == tekst[pr-1-i]){;} else {return false;}}
+        return true;
+}
+
+void removeSpaces(char tekst[], char fixed[]){
+    int pr = strlen(tekst);
+    for(int i = 0; i < pr; i++){
+        if(tekst[i] != ' '){
+            fixed[i] = tekst[i];
+            }}}
 
 int main(int argc, char **argv)
-{
-	
+{   
+    int r = 20;
+    char tekst[r];
+    char fixed[r];
+    cin.getline(tekst, r);
+    int pr = strlen(tekst);
+    removeSpaces(tekst, fixed);
+    if (czy_palindrom(tekst, pr)){
+        cout << "tak ";
+        } else { cout << "nie";}
 	return 0;
 }
 
