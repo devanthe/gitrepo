@@ -19,8 +19,8 @@ int rere(int liczby[], int lewy, int prawy, int n){
     else {if(liczby[lewy] == n){cout << "element jest" << endl; return lewy;} else {rere(liczby, lewy+1, prawy, n);}}}
     
 int erer(int liczby[], int lewy, int prawy, int n){ //od końca tutaj
-    if(lewy > prawy){cout << "elementu nie znaleziono" << endl; return -1;} //nie znaleziono elementu e 
-    else {if(liczby[lewy] == n){cout << "element jest" << endl; return lewy;} else {rere(liczby, lewy+1, prawy, n);}}}
+    if(lewy < prawy){cout << "elementu nie znaleziono" << endl; return -1;} //nie znaleziono elementu e 
+    else {if(liczby[lewy] == n){cout << "element jest" << endl; return lewy;} else {rere(liczby, lewy-1, prawy, n);}}}
 
 int main(int argc, char **argv)
 {
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     int n;
     cout << "podaj szukany element" << endl; cin >> n;
     //int indeks = szukaj_it(liczby, 7, n);
-    int indeks = rere(liczby, 0, 6, n);
+    int indeks = erer(liczby, 0, 6, n);
     if(indeks > -1){
         cout << liczby[indeks] << endl;
         }
