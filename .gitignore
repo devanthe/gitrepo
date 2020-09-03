@@ -4,11 +4,21 @@
 *.lck
 .~*
 
+# pyton
 __pycache__/
 *.py[cod]
 *.pyc
 venv
 pve
+
+# c++
+*.so
+
+# środowiska
+.env
+.venv
+env/
+venv/
 
 .DS_Store
 
